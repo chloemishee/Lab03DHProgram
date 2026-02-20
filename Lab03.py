@@ -137,7 +137,7 @@ def main():
     bob.establish_session(key_for_bob)
 
     print_step("Step 3: Secure Message Transmission")
-    message = b"<INPUT YOUR MESSAGE HERE>"
+    message = b"Chloe Rivera does not know which one is Diffie and which is Hellman"
     encrypted_msg = xor_crypt(message, alice.session_prng)
     delivered_data = net.send("Alice", "Bob", encrypted_msg)
     final_message = xor_crypt(delivered_data, bob.session_prng)
